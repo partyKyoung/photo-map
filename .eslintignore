@@ -1,0 +1,4 @@
+# create-react-app으로 생성된 파일들은 eslint 영향 받지 않도록 함.
+src/serviceWorker.ts
+config/*
+scripts/*
