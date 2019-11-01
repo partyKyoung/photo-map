@@ -10,3 +10,4 @@
 
 ## Hooks Reference
 - [리액트의 Hooks 완벽 정복하기](https://velog.io/@velopert/react-hooks)
+- [useEffect 완벽 가이드](https://rinae.dev/posts/a-complete-guide-to-useeffect-ko)
