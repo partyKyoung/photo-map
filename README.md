@@ -11,3 +11,12 @@
 ## Hooks Reference
 - [리액트의 Hooks 완벽 정복하기](https://velog.io/@velopert/react-hooks)
 - [useEffect 완벽 가이드](https://rinae.dev/posts/a-complete-guide-to-useeffect-ko)
+
+## pull request 규칙
+1. Repository Fork.
+2. 코드 작성 or 이슈 수정 후 dev 브랜치로 pull Request.
+3. 코드 리뷰 후 merge.
+  - 코드 리뷰 없이는 절대 merge 하지 않는다.
+  - merge 는 rebase로 한다.
+    - [https://cyberx.tistory.com/96](https://cyberx.tistory.com/96)
+    - [Git Merging 과 Rebase 의 상황별 사용법](https://elegantcoder.com/git-merge-or-rebase/)
