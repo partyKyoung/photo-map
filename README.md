@@ -12,11 +12,23 @@
 - [리액트의 Hooks 완벽 정복하기](https://velog.io/@velopert/react-hooks)
 - [useEffect 완벽 가이드](https://rinae.dev/posts/a-complete-guide-to-useeffect-ko)
 
-## pull request 규칙
+## pull request 방법
 1. Repository Fork.
 2. 코드 작성 or 이슈 수정 후 dev 브랜치로 pull Request.
 3. 코드 리뷰 후 merge.
-  - 코드 리뷰 없이는 절대 merge 하지 않는다.
-  - merge 는 rebase로 한다.
-    - [https://cyberx.tistory.com/96](https://cyberx.tistory.com/96)
-    - [Git Merging 과 Rebase 의 상황별 사용법](https://elegantcoder.com/git-merge-or-rebase/)
+
+### pull request 규칙
+- 코드 리뷰 없이는 절대 merge 하지 않는다.
+- merge 는 rebase로 한다.
+  - [https://cyberx.tistory.com/96](https://cyberx.tistory.com/96)
+  - [Git Merging 과 Rebase 의 상황별 사용법](https://elegantcoder.com/git-merge-or-rebase/)
+
+### git commit 메시지
+- feat (new feature)
+- imp (improvement on an existing feature)
+- fix (bug fix)
+- refac (refactoring production code)
+- docs (changes to documentation)
+- style (formatting, missing semi colons, etc; no code change)
+- test (adding missing tests, refactoring tests; no production code change)
+- chore (updating general tasks etc; no production code change)
