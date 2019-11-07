@@ -29,7 +29,7 @@
   - [https://cyberx.tistory.com/96](https://cyberx.tistory.com/96)
   - [Git Merging 과 Rebase 의 상황별 사용법](https://elegantcoder.com/git-merge-or-rebase/)
 
-### git commit 메시지 ㅇㅇ
+### git commit 메시지
 
 - feat (new feature)
 - imp (improvement on an existing feature)
