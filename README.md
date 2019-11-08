@@ -26,8 +26,23 @@
 
 - 코드 리뷰 없이는 절대 merge 하지 않는다.
 - merge 는 rebase로 한다.
-  - [https://cyberx.tistory.com/96](https://cyberx.tistory.com/96)
+  - [Git merge, rebase 이해하기](https://cyberx.tistory.com/96)
   - [Git Merging 과 Rebase 의 상황별 사용법](https://elegantcoder.com/git-merge-or-rebase/)
+
+### git rebase 명령어
+
+```
+git pull <target_branch>
+git checkout <current_branch>
+git rebase <target_branch>
+
+// 충돌이 났으면 충돌을 해결한 후 rebase 작업을 마저 끝낸다.
+git add --all
+git rebase --continue
+
+// 서버의 히스토리를 새로 덮어씌우기 위해 git push --force 명령어를 사용한다.
+git push origin <current_branch> -f
+```
 
 ### git commit 메시지
 
