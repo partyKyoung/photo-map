@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
+import { ThemeProvider } from 'styled-components';
 
-import { theme, ThemeProvider } from '@/styledComponents';
+import theme from 'styles/theme';
 
 import App from './App';
 import * as serviceWorker from './serviceWorker';
