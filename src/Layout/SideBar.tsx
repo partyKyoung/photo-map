@@ -1,14 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 
-type SideBarProps = {
+interface SideBarProps {
   open: boolean;
   setOpen: (open: boolean) => void;
-};
+}
 
-type StyleProps = {
+interface StyleProps {
   open: boolean;
-};
+}
 
 const StyledSideBar = styled.nav<StyleProps>`
   display: flex;
@@ -41,7 +41,7 @@ const StyledMenuButton = styled.button`
   left: 0;
 `;
 
-function SideBar({ open, setOpen }: SideBarProps) {
+const SideBar = ({ open, setOpen }: SideBarProps) => {
   return (
     <StyledSideBar open={open}>
       <StyledMenuButton onClick={() => setOpen(!open)}>
@@ -67,6 +67,6 @@ function SideBar({ open, setOpen }: SideBarProps) {
       </a>
     </StyledSideBar>
   );
-}
+};
 
 export default SideBar;

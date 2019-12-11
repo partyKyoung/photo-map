@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 
-type HeaderProps = {
+interface HeaderProps {
   children?: string;
   open: boolean;
   setOpen: (open: boolean) => void;
-};
+}
 
 const StyledHeader = styled.div`
   position: fixed;
@@ -34,7 +34,7 @@ const StyledMenuButton = styled.button`
   right: 0;
 `;
 
-function Header({ open, setOpen }: HeaderProps) {
+const Header = ({ open, setOpen }: HeaderProps) => {
   return (
     <StyledHeader>
       <StyledHeaderText>헤더</StyledHeaderText>
@@ -43,6 +43,6 @@ function Header({ open, setOpen }: HeaderProps) {
       </StyledMenuButton>
     </StyledHeader>
   );
-}
+};
 
 export default Header;
