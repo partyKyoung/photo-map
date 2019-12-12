@@ -25,7 +25,7 @@ const StyledHeader = styled.div`
   justify-content: center;
 `;
 
-const StyledHeaderText = styled.div`
+const StyledHeaderText = styled.header`
   font-size: 20px;
 `;
 
