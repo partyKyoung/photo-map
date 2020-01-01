@@ -1,29 +1,15 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
+import React from 'react';
+import { Route, Switch } from 'react-router-dom';
 
-import Header from './Layout/Header';
-import SideBar from './Layout/SideBar';
-
-const Main = styled.div`
-  padding-top: 50px;
-`;
-
-const Wrapper = styled.div`
-  padding: 1rem 0;
-  text-align: center;
-`;
+import Home from '@/pages/Home';
+import UploadPhoto from '@/pages/UploadPhoto';
 
 const App: React.FC = () => {
-  const [open, setOpen] = useState(false);
-
   return (
-    <Wrapper>
-      <Header open={open} setOpen={setOpen}>
-        헤더
-      </Header>
-      <SideBar open={open} setOpen={setOpen} />
-      <Main>main</Main>
-    </Wrapper>
+    <Switch>
+      <Route component={Home} exact path="/" />
+      <Route component={UploadPhoto} exact path="/photo/upload" />
+    </Switch>
   );
 };
 export default App;

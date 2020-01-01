@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 interface SideBarProps {
@@ -47,12 +48,12 @@ const SideBar = ({ open, setOpen }: SideBarProps) => {
       <StyledMenuButton onClick={() => setOpen(!open)}>
         <img src="../image/bar-menu.svg" alt="메뉴버튼" />
       </StyledMenuButton>
-      <a href="/">
+      <Link to="/photo/upload">
         <span role="img" aria-label="about us">
           &#x1f481;&#x1f3fb;&#x200d;&#x2642;&#xfe0f;
         </span>
-        내사진
-      </a>
+        사진 업로드
+      </Link>
       <a href="/">
         <span role="img" aria-label="price">
           &#x1f4b8;
