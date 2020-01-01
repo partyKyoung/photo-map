@@ -1,7 +1,13 @@
 import React from 'react';
 
+import UploadInput from '@/components/upload/UploadInput';
+
 const UploadPhotoContainer = () => {
-  return <div>사진 업로드</div>;
+  return (
+    <div>
+      <UploadInput />
+    </div>
+  );
 };
 
 export default UploadPhotoContainer;
