@@ -37,7 +37,7 @@ const StyledMenuButton = styled.button`
 const Header = ({ open, setOpen }: HeaderProps) => {
   return (
     <StyledHeader>
-      <StyledHeaderText>헤더</StyledHeaderText>
+      <StyledHeaderText>Photo Map</StyledHeaderText>
       <StyledMenuButton onClick={() => setOpen(!open)}>
         <img src="../image/bar-menu.svg" alt="메뉴버튼" />
       </StyledMenuButton>
