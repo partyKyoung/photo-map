@@ -36,6 +36,7 @@ const UploadFile = styled.input`
 `;
 
 const UploadInput = (): JSX.Element => {
+  const fileTypes = ['gif', 'png', 'jpg', 'jpeg', 'tif', 'tiff'];
   const [previewUrl, setPreview] = useState('');
   const [file, setFile] = useState<File | null>(null);
 
@@ -46,7 +47,10 @@ const UploadInput = (): JSX.Element => {
       return;
     }
 
-    // 파일 데이터를 읽으려면 FuleReader API를 사용해야한다.
+    if (!fileTypes.find(type => `image/${type}` === files[0].type)) {
+      return;
+    }
+    // 파일 데이터를 읽으려면 FileReader API를 사용해야한다.
     const reader = new FileReader();
 
     // FileReader가 즉시 파일을 읽는게 아니기 때문에 onload 이벤트 핸들러를 붙여서 콜백으로 파일을 다 읽었다는 것을 알려줘야 한다.
@@ -67,19 +71,26 @@ const UploadInput = (): JSX.Element => {
   };
 
   return (
-    <Wrapper>
-      <UploadLabel htmlFor="upload">
-        <UploadFile id="upload" type="file" onChange={handleChangeFile} />
-        사진 업로드
-      </UploadLabel>
-      <PreViewer>
-        {file ? (
-          <img src={previewUrl} alt="업로드한 이미지" />
-        ) : (
-          <span>이미지를 업로드 해주세요.</span>
-        )}
-      </PreViewer>
-    </Wrapper>
+    <>
+      <Wrapper>
+        <UploadLabel htmlFor="upload">
+          <UploadFile
+            id="upload"
+            type="file"
+            accept="image/*"
+            onChange={handleChangeFile}
+          />
+          사진 업로드
+        </UploadLabel>
+        <PreViewer>
+          {file ? (
+            <img src={previewUrl} alt="업로드한 이미지" />
+          ) : (
+            <span>이미지를 업로드 해주세요.</span>
+          )}
+        </PreViewer>
+      </Wrapper>
+    </>
   );
 };
 
