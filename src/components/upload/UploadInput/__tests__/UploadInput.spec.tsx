@@ -11,6 +11,22 @@ describe('<UploadInput />', () => {
     getByText('이미지를 업로드 해주세요.'); //사진 미리보기 view가 있는지 확인
   });
 
+  it('파일 업로드시 이미지 형식 파일을 제외한 다른 파일들은 업로드 할 수 없다.', async () => {
+    const { getByLabelText, getByText } = render(<UploadInput />);
+    const input = getByLabelText('사진 업로드');
+    const file = new File(['dummy content'], 'example.pdf', {
+      type: 'application/pdf',
+    });
+
+    fireEvent.change(input, {
+      target: {
+        files: [file],
+      },
+    });
+
+    await wait(() => getByText('이미지를 업로드 해주세요.'));
+  });
+
   it('파일 업로드시 사진 미리보기가 정상적으로 작동된다.', async () => {
     const { getByAltText, getByLabelText } = render(<UploadInput />);
     const input = getByLabelText('사진 업로드');
