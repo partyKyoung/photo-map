@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 interface HeaderProps {
@@ -7,12 +8,13 @@ interface HeaderProps {
   setOpen: (open: boolean) => void;
 }
 
-const StyledHeader = styled.div`
+const StyledHeader = styled.header`
   position: fixed;
   top: 0;
   width: 100%;
   height: 50px;
   text-align: center;
+  line-height: 50px;
   background: linear-gradient(
     90deg,
     #d4dfe6,
@@ -20,24 +22,22 @@ const StyledHeader = styled.div`
     #cadbe9 69%,
     #6aafe6
   );
-  display: flex;
-  align-items: center;
-  justify-content: center;
 `;
 
-const StyledHeaderText = styled.header`
-  font-size: 20px;
+const StyledHeaderText = styled(Link)`
+  font-size: 1.25rem;
 `;
 
 const StyledMenuButton = styled.button`
-  position: fixed;
-  right: 0;
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
 `;
 
 const Header = ({ open, setOpen }: HeaderProps) => {
   return (
     <StyledHeader>
-      <StyledHeaderText>Photo Map</StyledHeaderText>
+      <StyledHeaderText to="/">Photo Map</StyledHeaderText>
       <StyledMenuButton onClick={() => setOpen(!open)}>
         <img src="../image/bar-menu.svg" alt="메뉴버튼" />
       </StyledMenuButton>
